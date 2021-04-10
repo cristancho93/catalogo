@@ -19,6 +19,7 @@ def principal():
     productos.append(escudo)
     productos.append(montura)
 
+    # Dependiendo del grupo que se seleccione con la funcion aleatoria sabemos que fabrica de cuerpos utilizar
     if arma.grupo == "Humanos":
         fabricas2 = FabricaHumanos2()
     else:
