@@ -11,13 +11,24 @@ def principal():
     fabrica = choice(fabricas)
     arma = fabrica.crear_arma()
     escudo = fabrica.crear_escudo()
+    montura = fabrica.crear_montura()
 
     productos = []
 
     productos.append(arma)
     productos.append(escudo)
+    productos.append(montura)
 
-    return render_template("productos.html", productos = productos)
+    if arma.grupo == "Humanos":
+        fabricas2 = FabricaHumanos2()
+    else:
+        fabricas2 = FabricaOrcos2()
+
+    cuerpo = fabricas2.crear_cuerpo()
+    cuerpos = []
+    cuerpos.append(cuerpo)
+
+    return render_template("productos.html", productos = productos, cuerpos = cuerpos)
 
 if __name__ == '__main__':
     app.run(debug=True)
