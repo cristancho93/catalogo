@@ -18,5 +18,18 @@
                 </tr>
             {% endfor %}
         </table>
+
+        <table border="1">
+            <tr>
+                <th>Grupo</th>
+            </tr>
+            {% for c in cuerpos %}
+                <tr>
+                    <td>{{ c.brazos }}</td>
+                    <td><img src="{{ c.imgcuerpo }}" width="150px"></td>
+                </tr>
+            {% endfor %}
+        </table>
+
     </body>
 </html>
