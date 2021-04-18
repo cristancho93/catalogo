@@ -22,7 +22,6 @@ def principal_original():
 
     productos.append(arma)
     productos.append(escudo)
-
     return render_template("productos.html", productos = productos)
 
 @app.route('/decorador')
